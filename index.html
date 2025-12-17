@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>בניית אתרים מקצועית לעסקים — נואבו דיזיין</title>
+  <meta name="description" content="חברת בניית אתרים מקצועית בישראל. פתרונות בניית אתרים לעסקים קטנים ובינוניים עם עיצוב ייחודי ופיתוח מתקדם.">
+  <meta name="keywords" content="בניית אתרים, בניית אתרים לעסקים, חברת בניית אתרים מקצועית בישראל, בניית אתרים לעסקים קטנים ובינוניים">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="/assets/logo.webp" alt="נואבו דיזיין" class="logo" />
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="התקשר אלינו">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services">שירותים</a></li>
+        <li><a href="/about">אודות</a></li>
+        <li><a href="/contact">צור קשר</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">צור קשר</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img data-placeholder="hero-1" data-context="Wide panoramic view of modern web design studio workspace with creative team collaborating on website projects, multiple screens showing colorful website designs, bright natural lighting" src="/assets/hero-hero-1.webp" alt="סטודיו עיצוב אתרים מקצועי" class="hero-img">
+    <div class="hero-content">
+      <h1>בניית אתרים מקצועית שמניבה תוצאות אמיתיות</h1>
+      <h3>פתרונות בניית אתרים לעסקים קטנים ובינוניים עם עיצוב ייחודי ופיתוח מתקדם</h3>
+      <a href="/contact" class="btn-primary hero-cta">התחל עכשיו</a>
+    </div>
+  </section>
+
+  <section class="services-intro">
+    <div class="container">
+      <h2>למה לבחור בנואבו דיזיין לבניית אתרים?</h2>
+      <p>אנחנו חברת בניית אתרים מקצועית בישראל המתמחה בפיתוח פתרונות דיגיטליים מותאמים אישית לעסקים. עם ניסיון רב בבניית אתרים לחברות, אנו מבינים את הצרכים הייחודיים של כל לקוח ויוצרים אתרים שמשקפים את הזהות העסקית שלכם ומניבים תוצאות מדידות.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-palette feature-icon"></i>
+          <h3>עיצוב ייחודי ומותאם אישית</h3>
+          <p>כל אתר שאנו בונים הוא ייחודי לחלוטין ומשקף את האישיות והערכים של העסק שלך. אנחנו לא משתמשים בתבניות גנריות.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-code feature-icon"></i>
+          <h3>פיתוח טכנולוגי מתקדם</h3>
+          <p>אנו משתמשים בטכנולוגיות העדכניות ביותר כדי להבטיח שהאתר שלך יהיה מהיר, מאובטח ומותאם למכשירים ניידים.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3>אסטרטגיה דיגיטלית מנצחת</h3>
+          <p>בניית אתרים היא רק ההתחלה. אנחנו עוזרים לך לפתח אסטרטגיה דיגיטלית שלמה שתעזור לעסק שלך לצמוח באינטרנט.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-headset feature-icon"></i>
+          <h3>תמיכה ושירות מעולים</h3>
+          <p>אנחנו כאן בשבילך גם אחרי השקת האתר, עם תמיכה טכנית מלאה ועדכונים שוטפים לפי הצורך.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-showcase">
+    <div class="container">
+      <h2>השירותים שלנו בבניית אתרים</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <img data-placeholder="service-1" data-context="Professional web designer working on responsive website layout on large monitor, showing colorful modern website design with clean interface" src="/assets/service-service-1.webp" alt="עיצוב אתרים מקצועי" class="service-img">
+          <div class="service-content">
+            <h3>עיצוב אתרים מקצועי</h3>
+            <p>יצירת חוויית משתמש מושלמת עם עיצוב ויזואלי מרשים שמותאם לקהל היעד שלך. אנו מתמקדים בבניית אתרים עם עיצוב שמשלב אסתטיקה ופונקציונליות.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img data-placeholder="service-2" data-context="Developer coding responsive website on laptop with multiple screens showing mobile and desktop views, clean modern code editor interface" src="/assets/service-service-2.webp" alt="פיתוח אתרים רספונסיביים" class="service-img">
+          <div class="service-content">
+            <h3>פיתוח אתרים רספונסיביים</h3>
+            <p>בניית אתרים שנראים ועובדים מעולה על כל מכשיר - מחשב, טאבלט וסמארטפון. פתרונות בניית אתרים לעסקים קטנים ובינוניים שמבטיחים נגישות מקסימלית.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img data-placeholder="service-3" data-context="E-commerce website dashboard showing product catalog, shopping cart, and payment gateway integration on modern interface" src="/assets/service-service-3.webp" alt="אתרי מסחר אלקטרוני" class="service-img">
+          <div class="service-content">
+            <h3>אתרי מסחר אלקטרוני</h3>
+            <p>פתרונות בניית אתרים מקצועיים לחנויות אונליין עם מערכות תשלום מאובטחות וניהול מלאי מתקדם שמאפשרים למכור באינטרנט בקלות.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img data-placeholder="service-4" data-context="SEO optimization dashboard showing keyword rankings, analytics graphs, and search engine results pages with website climbing in rankings" src="/assets/service-service-4.webp" alt="אופטימיזציה למנועי חיפוש" class="service-img">
+          <div class="service-content">
+            <h3>אופטימיזציה למנועי חיפוש</h3>
+            <p>בניית אתרים עם אופטימיזציה מובנית למנועי חיפוש כדי להבטיח שהאתר שלך יימצא בקלות על ידי לקוחות פוטנציאליים בגוגל.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2>תהליך בניית האתרים שלנו</h2>
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>ייעוץ והבנת הצרכים</h3>
+          <p>אנחנו מתחילים עם פגישת ייעוץ מעמיקה כדי להבין את המטרות העסקיות שלך ואת קהל היעד. זה הבסיס לבניית אתרים מוצלחת.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>תכנון ואסטרטגיה</h3>
+          <p>יצירת מפת אתר מפורטת ואסטרטגיית תוכן שמתאימה למטרות העסקיות שלך ולצרכי המשתמשים.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>עיצוב ופיתוח</h3>
+          <p>בניית אתרים עם עיצוב ייחודי ופיתוח טכנולוגי מתקדם, תוך שמירה על תקשורת צמודה ועדכונים שוטפים.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>בדיקות והשקה</h3>
+          <p>בדיקות מקיפות של כל היבטי האתר לפני ההשקה, ולוודא שהכל עובד בצורה מושלמת על כל המכשירים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>מוכנים להתחיל את פרויקט בניית האתרים שלכם?</h2>
+      <p>צרו איתנו קשר עוד היום לקבלת ייעוץ חינם והצעת מחיר מותאמת אישית</p>
+      <a href="/contact" class="btn-primary">בואו נדבר</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 נואבו דיזיין. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = 'b55155c2-df5c-4dae-9aed-235a3e338aa2';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>
